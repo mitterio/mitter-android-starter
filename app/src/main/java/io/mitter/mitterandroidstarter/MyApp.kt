@@ -1,7 +1,6 @@
 package io.mitter.mitterandroidstarter
 
 import android.app.Application
-import com.google.common.eventbus.EventBus
 import io.mitter.android.Mitter
 import io.mitter.android.domain.model.MitterConfig
 import io.mitter.android.domain.model.UserAuth
