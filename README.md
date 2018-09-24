@@ -12,7 +12,7 @@ Use this basic starter template to whip up an Android chat app powered by Mitter
 
 ## Using UI layouts
 
-This starter template consist the following UI XML files:
+This starter template contains the following UI XML files:
 
 * **2** shape files inside the `drawable` package
 * **2** reusable layouts files inside the `layout` package
@@ -25,4 +25,6 @@ Most of the configuration for FCM has been already done in this template. You do
 
 Also, you need to use an event bus or anything else similar to that to send the received push messages from the `MyApp` class to your `MainActivity` or any other activity or fragment that you need.
 
+## Closing notes
 
+For this starter template to work, you need to have a working application on the Mitter platform. You can register for an account and create an application at [mitter.io](https://mitter.io/ "mitter.io").
