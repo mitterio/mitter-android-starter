@@ -55,6 +55,10 @@ class MyApp : Application() {
             override fun onParticipationChangedEvent(channelId: String, participantId: String, newStatus: ParticipationStatus, oldStatus: ParticipationStatus?) {
 
             }
+
+            override fun onTypingIndication(channelId: String, senderId: String) {
+
+            }
         })
     }
 }

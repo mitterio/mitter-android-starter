@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
 import android.util.Log
 import io.mitter.android.Mitter
+import io.mitter.android.domain.model.FetchMessageConfig
 import io.mitter.android.error.model.base.ApiError
 import io.mitter.mitterandroidstarter.MyApp
 import io.mitter.mitterandroidstarter.R
@@ -13,7 +14,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
     private lateinit var mitter: Mitter
-    private val channelId: String = "your-channel-id-here"
+    private val channelId: String = "channel-id-here"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,6 +36,7 @@ class MainActivity : AppCompatActivity() {
         //Getting messages in a given channel
         messaging.getMessagesInChannel(
             channelId = channelId,
+            fetchMessageConfig = FetchMessageConfig(limit = 25),
             onValueAvailableCallback = object : Mitter.OnValueAvailableCallback<List<Message>> {
                 override fun onError(apiError: ApiError) {
                     //Couldn't get the messages
